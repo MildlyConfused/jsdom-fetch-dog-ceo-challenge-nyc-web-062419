@@ -1,4 +1,4 @@
-var breeds;
+let breeds;
 
 fetch("https://dog.ceo/api/breeds/image/random/4")
   .then(resp => resp.json())
@@ -36,7 +36,6 @@ function filterDropdown() {
   breedContainer.innerHTML = "";
   breeds.forEach(breed => {
     if (breed.startsWith(letter)) {
-      console.log(breed);
       const li = document.createElement("li");
       li.innerText = breed;
       breedContainer.append(li);
